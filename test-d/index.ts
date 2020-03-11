@@ -100,7 +100,7 @@ type ExpectedUserType = { __typename?: "User" } & Pick<User, "email" | "id" | "n
 
   {
     type QueryResult = { user?: { firstPost?: { title: string } } };
-    type Post = DeepExtractTypeSkipArrays<QueryResult, ["user", "firstPost"]>;
+    type Post = DeepExtractType<QueryResult, ["user", "firstPost"]>;
     expectType<{ title: string }>(something as Post);
   }
 }

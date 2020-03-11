@@ -53,7 +53,7 @@ type ___Pick<T, Path extends [...(string | number)[]]> = Path extends [keyof T, 
  * @example
  * type QueryResult = { user?: { firstPost?: { title: string } } };
  * // will be { title: string }
- * type Post = DeepExtractTypeSkipArrays<QueryResult, ["user", "firstPost"]>;
+ * type Post = DeepExtractType<QueryResult, ["user", "firstPost"]>;
  */
 export type DeepExtractType<Source, Path extends [...(string | number)[]]> = Id<
   NonNullable<___Pick<NonNullable<Source>, Path>>
