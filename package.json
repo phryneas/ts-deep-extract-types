@@ -15,9 +15,14 @@
     "tsd": "^0.11.0",
     "typescript": "^3.8.3"
   },
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
   "scripts": {
     "generate-test-types": "cd test-d/fixtures; npx graphql-codegen",
-    "test": "tsd"
+    "test": "tsd",
+    "prepublishOnly": "npm run test"
   },
   "prettier": {
     "printWidth": 120
