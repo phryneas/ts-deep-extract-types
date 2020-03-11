@@ -1,0 +1,17 @@
+query AllUsersWithComments {
+  allUsers {
+    nodes {
+      commentsByUserId(first: 50) {
+        nodes {
+          id
+          content
+          nodeId
+          postId
+        }
+      }
+      email
+      id
+      nodeId
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "ts-deep-extract-types",
+  "version": "1.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": "https://github.com/phryneas/ts-deep-extract-types",
+  "author": "phryneas",
+  "license": "MIT",
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.13.0",
+    "@graphql-codegen/typescript": "^1.13.0",
+    "@graphql-codegen/typescript-operations": "^1.13.0",
+    "graphql": "^14.6.0",
+    "prettier": "^1.19.1",
+    "tsd": "^0.11.0",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "generate-test-types": "cd test-d/fixtures; npx graphql-codegen",
+    "test": "tsd"
+  },
+  "prettier": {
+    "printWidth": 120
+  },
+  "tsd": {}
+}
